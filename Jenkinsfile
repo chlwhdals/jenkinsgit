@@ -12,12 +12,15 @@ pipeline {
         sudo docker build -t chlwhdals264/keduitlab:red .
         sudo docker push chlwhdals264/keduitlab:red
         '''
+      }
+    }
     stage('delivery and deployment') {
       steps {
         sh '''
-        sudo ansible-playbook  /root/node.yml 
+        sudo ansible-playbook /root/node.yml 
         '''
       }
     }
   }
 }
+
