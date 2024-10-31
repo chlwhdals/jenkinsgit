@@ -18,7 +18,7 @@ pipeline {
       steps {
         sh '''
         ansible-playbook /var/lib/jenkins/node.yml
-        pwd 
+        ansible-playbook /var/lib/jenkins/master.yml 
         '''
       }
     }
