@@ -17,7 +17,7 @@ pipeline {
     stage('delivery and deployment') {
       steps {
         sh '''
-        sudo ansible-playbook /root/node.yml 
+        ansible-playbook /var/lib/jenkins/node.yml 
         '''
       }
     }
