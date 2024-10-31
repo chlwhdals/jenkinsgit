@@ -17,7 +17,8 @@ pipeline {
     stage('delivery and deployment') {
       steps {
         sh '''
-        ansible-playbook /var/lib/jenkins/node.yml 
+        ansible-playbook /var/lib/jenkins/node.yml
+        pwd 
         '''
       }
     }
