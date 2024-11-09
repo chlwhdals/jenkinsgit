@@ -11,6 +11,7 @@ pipeline {
         sh '''
         sudo docker build -t chlwhdals264/keduitlab:red .
         sudo docker push chlwhdals264/keduitlab:red
+        ansible-playbook -i /etc/ansible/hosts /var/lib/jenkins/workspace/second/svc-deploy.yml
         '''
       }
     }
